@@ -1,20 +1,16 @@
-.main-banner {
+.About-Page {
     background-color: #fff;
-    min-height: 30vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
     font-size: calc(10px + 2vmin);
     color: white;
     padding: 20px 50px;
     border-bottom-left-radius: 150px;
     color: #222;
+    text-align: center;
+    height: 100%;
 }
 .profile-foto {
     height: 40vmin;
     pointer-events: none;
-    align-self: center;
-    justify-self: center;
     border-radius: 10px;
     animation: fadeIn ease 5s;
     -webkit-animation: fadeIn ease 5s;
@@ -46,14 +42,9 @@
     0% {opacity:0;}
     100% {opacity:1;}
 }
-.about-joaquim {
-    align-self: center;
-    justify-self: flex-start; 
-    max-width: 30vw;
-}
-.portfolio-link {
-    color: #61dafb;
-}
 .main-title {
     margin-top: 100px;
+}
+.About-Page p {
+    font-size: 2.5vw;
 }

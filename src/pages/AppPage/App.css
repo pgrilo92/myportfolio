@@ -1,15 +1,23 @@
 body {
   display: flex;
+  position: relative;
   min-height: 100vh;
   min-width: 100vw;
   flex-direction: column;
   font-family: 'IBM Plex Sans', sans-serif;
 }
 .App {
+  height: 100%;
   flex: 1 0 auto;
 }
 .dark {
   background-color: #222;
   color: #e6e6e6;
   border-color: #e6e6e6;
+}
+.page-box {
+  padding-bottom: 120px;
+}
+.fixed-action-btn {
+  bottom: 110px;
 }

@@ -3,6 +3,7 @@
 }
 .col {
     margin-top: 20px;
+    overflow: hidden;
 }
 .intro {
     background-color: black;
@@ -16,6 +17,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    padding-top: 50px;
 }
 .main-title {
     margin: 0;
@@ -42,13 +44,15 @@
     padding-top: 40px;
 }
 .mainpage-jumb {
-    
     min-width: 60px;
     min-height: 100px;
- 
     z-index: 0;
 }
 .main-header-5 {
     position: relative;
     z-index: 1;
+}
+.col h3{
+    font-size: 40px;/* Fallback */
+    font-size: 6vw;
 }

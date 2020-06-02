@@ -14,23 +14,23 @@ function HomePage() {
                 <div className="col s4">
                     <i className="large material-icons">work</i>
                     <h3>Work</h3>
-                    <p>Work can be done remotely with meetings over video chat. Work will be done by project basis instead of hourly. Avoid any surprise costs.</p>
+                    <p>Agile Development, first we Validate your vision and tailor towards your needs.</p>
                 </div>
                 <div className="col s4">
                     <i className="large material-icons">code</i>
                     <h3>Code</h3>
-                    <p>Focus on efficient and easily read code. This assures that the code is ready for other developers.</p>
+                    <p>Scalable business-driven solutions using powerful and modern technologies.</p>
                 </div>
                 <div className="col s4">
                     <i className="large material-icons">cloud</i>
-                    <h3>Cloud</h3>
-                    <p>The time is now to move your presence online, especially at times like this. It shows us the importance of onlince presence.</p>
+                    <h3>Remote</h3>
+                    <p>All work can be done remotely no matter where your location.</p>
                 </div>
             </div>
             <div className="container second">
                 <h1>Dev Tools </h1>
                 <br/>
-                <h5>A list of the stacks I currently use</h5>
+                <h5>Stacks currently used</h5>
             </div>
             <h3 className="lang-title">Languages</h3>
             <div className="row">
@@ -54,7 +54,7 @@ function HomePage() {
             <div className="row">
                 <div className="col s4">
                     <i className="large devicon-nodejs-plain colored"></i>
-                    <h3>NodeJS/Express</h3>
+                    <h3>NodeJS/ Express</h3>
                     <p>Express is a great framework to develop with Javascript because it is very lightweight and customizable.</p>
                 </div>
                 <div className="col s4">
@@ -94,8 +94,8 @@ function HomePage() {
                     <p>XCode is the main software used to create Apple apps, using a very dynamic language, Swift.</p>
                 </div>
                 <div className="col s4">
-                    <i className="large devicon-python-plain colored"></i>
-                    <h3>Adobe/Unity</h3>
+                    <i className="large devicon-illustrator-plain colored"></i>
+                    <h3>Adobe/ Unity</h3>
                     <p>Adobe used for creating images, icons, and logos. Unity is a very powerful software for gaming but can be used for exploring tools for VR/AR as well.</p>
                 </div>
                 <div className="col s4">

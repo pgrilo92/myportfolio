@@ -5,15 +5,16 @@
 .card {
     color: #222;
     background-color: #fff;
+    height: 50vh;
 }
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
-    color: #222;
+    color: #4259b3;
 }
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating):hover {
     color: #111;
 }
 .card-image img {
-    height: 300px;
+    height: 30vh;
 }
 iframe {
     width: 100%;
