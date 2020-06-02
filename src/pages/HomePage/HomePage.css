@@ -52,7 +52,8 @@
     position: relative;
     z-index: 1;
 }
-.col h3{
-    font-size: 40px;/* Fallback */
-    font-size: 6vw;
+@media screen and (max-width: 600px) {
+    .col h3 {
+        font-size: 6vw;
+    }
 }
