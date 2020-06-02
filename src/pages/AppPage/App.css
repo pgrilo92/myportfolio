@@ -1,0 +1,15 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  min-width: 100vw;
+  flex-direction: column;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+.App {
+  flex: 1 0 auto;
+}
+.dark {
+  background-color: #222;
+  color: #e6e6e6;
+  border-color: #e6e6e6;
+}

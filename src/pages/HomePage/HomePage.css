@@ -1,0 +1,54 @@
+.Home-Page {
+    text-align: center;
+}
+.col {
+    margin-top: 20px;
+}
+.intro {
+    background-color: black;
+    text-align: center;
+    min-width: 100vw;
+    height: 50vh;
+    color: white;
+    margin: 0;
+    background-image: url('../../images/business-code-coding-computer-270360.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main-title {
+    margin: 0;
+    padding-top: 40px;
+    position: relative;
+    z-index: 1;
+}
+.lang-title{
+    font-weight: bold;
+    padding: 20px;
+    margin: 0;
+}
+.second {
+    background-image: url('../../images/pc-office.jpg');
+    text-align: center;
+    min-width: 100vw;
+    height: 50vh;
+    color: white;
+    margin: 0;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 40px;
+}
+.mainpage-jumb {
+    
+    min-width: 60px;
+    min-height: 100px;
+ 
+    z-index: 0;
+}
+.main-header-5 {
+    position: relative;
+    z-index: 1;
+}

@@ -1,0 +1,23 @@
+.Portfolio-Page { 
+    margin-top: 50px;
+    text-align: center;
+}
+.card {
+    color: #222;
+    background-color: #fff;
+}
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
+    color: #222;
+}
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating):hover {
+    color: #111;
+}
+.card-image img {
+    height: 300px;
+}
+iframe {
+    width: 100%;
+    height: 40vh;
+    padding: 0;
+    margin: 0;
+}
