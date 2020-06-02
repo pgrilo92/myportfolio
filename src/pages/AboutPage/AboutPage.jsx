@@ -12,10 +12,10 @@ const AboutPage = (props) => {
                     My name is Joaquim and I am a Software Engineering in Toronto looking to help your online Business.
                     </p>
                     <a
-                    className="portfolio-link"
-                    href="https://www.github.com/pgrilo92"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                        className="portfolio-link"
+                        href="https://www.github.com/pgrilo92"
+                        target="_blank"
+                        rel="noopener noreferrer"
                     >
                     Github Link
                     </a>
