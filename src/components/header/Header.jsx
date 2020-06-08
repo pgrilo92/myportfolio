@@ -8,20 +8,20 @@ const Header = (props) => {
     <div className="navbar-fixed">
         <nav>
             <div className="nav-wrapper">
-                <Link className="brand-logo" to="/myportfolio" onClick={()=> setSideWidth(0)}>Joaquim Grilo</Link>
+                <Link className="brand-logo" to="/" onClick={()=> setSideWidth(0)}>Joaquim Grilo</Link>
                 <a href="javascript:void(0)" onClick={()=> setSideWidth(250)} class="sidenav-trigger"><i className="material-icons">menu</i></a>
                 <ul id="nav-mobile" className="right hide-on-med-and-down">
-                    <li><Link to="/myportfolio/portfolio">Portfolio</Link></li>
-                    <li><Link to="/myportfolio/about">About</Link></li>
+                    <li><Link to="/portfolio">Portfolio</Link></li>
+                    <li><Link to="/about">About</Link></li>
                     <li><a className="switch-dark-btn" onClick={props.darkMode}><i className="material-icons">{props.darkImage}</i></a></li>
                 </ul>
             </div>
         </nav>
         <ul className="side" style={{width: sideWidth}}>
             <a href="javascript:void(0)" className="closebtn" onClick={()=> setSideWidth(0)}>&times;</a>
-            <li><Link to="/myportfolio" onClick={()=> setSideWidth(0)}>Home</Link></li>
-            <li><Link to="/myportfolio/portfolio" onClick={()=> setSideWidth(0)}>Portfolio</Link></li>
-            <li><Link to="/myportfolio/about" onClick={()=> setSideWidth(0)}>About</Link></li>
+            <li><Link to="/" onClick={()=> setSideWidth(0)}>Home</Link></li>
+            <li><Link to="/portfolio" onClick={()=> setSideWidth(0)}>Portfolio</Link></li>
+            <li><Link to="/about" onClick={()=> setSideWidth(0)}>About</Link></li>
             <li><a className="switch-dark-btn" onClick={() => {
                 props.darkMode() 
                 setSideWidth(0)

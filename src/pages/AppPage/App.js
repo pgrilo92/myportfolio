@@ -33,13 +33,13 @@ function App() {
       <Header darkMode={darkMode} darkImage={darkImage} />
       <div className="page-box">
         <Switch>
-          <Route exact path='/myportfolio' render={
+          <Route exact path='/' render={
             () => <HomePage darkMode={darkMode} />
             }/>
-          <Route exact path='/myportfolio/portfolio' render={
+          <Route exact path='/portfolio' render={
             ()=> <PortfolioPage darkPortfolio={darkPortfolio} />
           } />
-          <Route exact path='/myportfolio/about' render={
+          <Route exact path='/about' render={
             ()=> <AboutPage darkAbout={darkAbout} />
           } />
         </Switch>
