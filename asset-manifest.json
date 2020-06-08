@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/myportfolio/static/css/main.221133fc.chunk.css",
-    "main.js": "/myportfolio/static/js/main.1bdcfc05.chunk.js",
-    "main.js.map": "/myportfolio/static/js/main.1bdcfc05.chunk.js.map",
-    "runtime-main.js": "/myportfolio/static/js/runtime-main.86b85267.js",
-    "runtime-main.js.map": "/myportfolio/static/js/runtime-main.86b85267.js.map",
-    "static/js/2.f0efcb59.chunk.js": "/myportfolio/static/js/2.f0efcb59.chunk.js",
-    "static/js/2.f0efcb59.chunk.js.map": "/myportfolio/static/js/2.f0efcb59.chunk.js.map",
-    "index.html": "/myportfolio/index.html",
-    "precache-manifest.157b8e76517f922b9ab0cc668482f24a.js": "/myportfolio/precache-manifest.157b8e76517f922b9ab0cc668482f24a.js",
-    "service-worker.js": "/myportfolio/service-worker.js",
-    "static/css/main.221133fc.chunk.css.map": "/myportfolio/static/css/main.221133fc.chunk.css.map",
-    "static/js/2.f0efcb59.chunk.js.LICENSE.txt": "/myportfolio/static/js/2.f0efcb59.chunk.js.LICENSE.txt",
-    "static/media/IMG_0060.jpg": "/myportfolio/static/media/IMG_0060.dd10dfb1.jpg",
-    "static/media/alpha-blog.png": "/myportfolio/static/media/alpha-blog.8c89f2f0.png",
-    "static/media/blackcoaches.png": "/myportfolio/static/media/blackcoaches.c0f9b2f7.png",
-    "static/media/HomePage.css": "/myportfolio/static/media/pc-office.7dcf6a8c.jpg",
-    "static/media/codex.png": "/myportfolio/static/media/codex.794ca019.png",
-    "static/media/photo-app.png": "/myportfolio/static/media/photo-app.24dbefa1.png"
+    "main.css": "/static/css/main.8876d3d7.chunk.css",
+    "main.js": "/static/js/main.16c746b5.chunk.js",
+    "main.js.map": "/static/js/main.16c746b5.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.a106779c.js",
+    "runtime-main.js.map": "/static/js/runtime-main.a106779c.js.map",
+    "static/js/2.f0efcb59.chunk.js": "/static/js/2.f0efcb59.chunk.js",
+    "static/js/2.f0efcb59.chunk.js.map": "/static/js/2.f0efcb59.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.c5d81e502a4d2f20a8d405915e21c725.js": "/precache-manifest.c5d81e502a4d2f20a8d405915e21c725.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.8876d3d7.chunk.css.map": "/static/css/main.8876d3d7.chunk.css.map",
+    "static/js/2.f0efcb59.chunk.js.LICENSE.txt": "/static/js/2.f0efcb59.chunk.js.LICENSE.txt",
+    "static/media/IMG_0060.jpg": "/static/media/IMG_0060.dd10dfb1.jpg",
+    "static/media/alpha-blog.png": "/static/media/alpha-blog.8c89f2f0.png",
+    "static/media/blackcoaches.png": "/static/media/blackcoaches.c0f9b2f7.png",
+    "static/media/HomePage.css": "/static/media/pc-office.7dcf6a8c.jpg",
+    "static/media/codex.png": "/static/media/codex.794ca019.png",
+    "static/media/photo-app.png": "/static/media/photo-app.24dbefa1.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.86b85267.js",
+    "static/js/runtime-main.a106779c.js",
     "static/js/2.f0efcb59.chunk.js",
-    "static/css/main.221133fc.chunk.css",
-    "static/js/main.1bdcfc05.chunk.js"
+    "static/css/main.8876d3d7.chunk.css",
+    "static/js/main.16c746b5.chunk.js"
   ]
 }
