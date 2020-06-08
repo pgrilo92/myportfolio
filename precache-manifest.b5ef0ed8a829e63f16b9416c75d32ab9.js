@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7c5961181b7c13e9461be8f9907ccc47",
+    "revision": "5683fdac421d14f71896019192557773",
     "url": "/myportfolio/index.html"
   },
   {
-    "revision": "1c70eba0c5baa91aef3e",
-    "url": "/myportfolio/static/css/main.03567fe2.chunk.css"
+    "revision": "8a26301bbea795471281",
+    "url": "/myportfolio/static/css/main.221133fc.chunk.css"
   },
   {
-    "revision": "84eca86418001646bc85",
-    "url": "/myportfolio/static/js/2.cf34478a.chunk.js"
+    "revision": "ab8d1bcd0f0f0f86120a",
+    "url": "/myportfolio/static/js/2.f0efcb59.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/myportfolio/static/js/2.cf34478a.chunk.js.LICENSE.txt"
+    "url": "/myportfolio/static/js/2.f0efcb59.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1c70eba0c5baa91aef3e",
-    "url": "/myportfolio/static/js/main.31088b4f.chunk.js"
+    "revision": "8a26301bbea795471281",
+    "url": "/myportfolio/static/js/main.b8dbe2c1.chunk.js"
   },
   {
     "revision": "b7233b44fe85679857af",
@@ -32,16 +32,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/myportfolio/static/media/alpha-blog.8c89f2f0.png"
   },
   {
+    "revision": "c0f9b2f76ed96f33eef59fe1929c4429",
+    "url": "/myportfolio/static/media/blackcoaches.c0f9b2f7.png"
+  },
+  {
     "revision": "77d1c35438963b499efef6ec402ff860",
     "url": "/myportfolio/static/media/business-code-coding-computer-270360.77d1c354.jpg"
   },
   {
-    "revision": "fccac5402f655f4ad707dae2be142efd",
-    "url": "/myportfolio/static/media/gogym-img.fccac540.png"
-  },
-  {
-    "revision": "48506486d42845935199de6552b62b6d",
-    "url": "/myportfolio/static/media/joaquim-web.48506486.png"
+    "revision": "794ca0195d825f713489d30676ab0c26",
+    "url": "/myportfolio/static/media/codex.794ca019.png"
   },
   {
     "revision": "7dcf6a8ce4872c6364b7e631345893ec",

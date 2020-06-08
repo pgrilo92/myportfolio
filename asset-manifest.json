@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/myportfolio/static/css/main.03567fe2.chunk.css",
-    "main.js": "/myportfolio/static/js/main.31088b4f.chunk.js",
-    "main.js.map": "/myportfolio/static/js/main.31088b4f.chunk.js.map",
+    "main.css": "/myportfolio/static/css/main.221133fc.chunk.css",
+    "main.js": "/myportfolio/static/js/main.b8dbe2c1.chunk.js",
+    "main.js.map": "/myportfolio/static/js/main.b8dbe2c1.chunk.js.map",
     "runtime-main.js": "/myportfolio/static/js/runtime-main.86b85267.js",
     "runtime-main.js.map": "/myportfolio/static/js/runtime-main.86b85267.js.map",
-    "static/js/2.cf34478a.chunk.js": "/myportfolio/static/js/2.cf34478a.chunk.js",
-    "static/js/2.cf34478a.chunk.js.map": "/myportfolio/static/js/2.cf34478a.chunk.js.map",
+    "static/js/2.f0efcb59.chunk.js": "/myportfolio/static/js/2.f0efcb59.chunk.js",
+    "static/js/2.f0efcb59.chunk.js.map": "/myportfolio/static/js/2.f0efcb59.chunk.js.map",
     "index.html": "/myportfolio/index.html",
-    "precache-manifest.ff09d7f218fd4cd70c45c310efeba253.js": "/myportfolio/precache-manifest.ff09d7f218fd4cd70c45c310efeba253.js",
+    "precache-manifest.b5ef0ed8a829e63f16b9416c75d32ab9.js": "/myportfolio/precache-manifest.b5ef0ed8a829e63f16b9416c75d32ab9.js",
     "service-worker.js": "/myportfolio/service-worker.js",
-    "static/css/main.03567fe2.chunk.css.map": "/myportfolio/static/css/main.03567fe2.chunk.css.map",
-    "static/js/2.cf34478a.chunk.js.LICENSE.txt": "/myportfolio/static/js/2.cf34478a.chunk.js.LICENSE.txt",
+    "static/css/main.221133fc.chunk.css.map": "/myportfolio/static/css/main.221133fc.chunk.css.map",
+    "static/js/2.f0efcb59.chunk.js.LICENSE.txt": "/myportfolio/static/js/2.f0efcb59.chunk.js.LICENSE.txt",
     "static/media/IMG_0060.jpg": "/myportfolio/static/media/IMG_0060.dd10dfb1.jpg",
     "static/media/alpha-blog.png": "/myportfolio/static/media/alpha-blog.8c89f2f0.png",
+    "static/media/blackcoaches.png": "/myportfolio/static/media/blackcoaches.c0f9b2f7.png",
     "static/media/HomePage.css": "/myportfolio/static/media/pc-office.7dcf6a8c.jpg",
-    "static/media/gogym-img.png": "/myportfolio/static/media/gogym-img.fccac540.png",
-    "static/media/joaquim-web.png": "/myportfolio/static/media/joaquim-web.48506486.png",
+    "static/media/codex.png": "/myportfolio/static/media/codex.794ca019.png",
     "static/media/photo-app.png": "/myportfolio/static/media/photo-app.24dbefa1.png"
   },
   "entrypoints": [
     "static/js/runtime-main.86b85267.js",
-    "static/js/2.cf34478a.chunk.js",
-    "static/css/main.03567fe2.chunk.css",
-    "static/js/main.31088b4f.chunk.js"
+    "static/js/2.f0efcb59.chunk.js",
+    "static/css/main.221133fc.chunk.css",
+    "static/js/main.b8dbe2c1.chunk.js"
   ]
 }
