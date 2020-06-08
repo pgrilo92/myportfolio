@@ -24,7 +24,7 @@ function HomePage() {
                 <div className="col s4">
                     <i className="large material-icons">cloud</i>
                     <h3>Remote</h3>
-                    <p>All work can be done remotely no matter where your location, while keepinh quality high.</p>
+                    <p>All work can be done remotely no matter where your location.</p>
                 </div>
             </div>
             <div className="container second">
