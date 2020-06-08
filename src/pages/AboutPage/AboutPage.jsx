@@ -17,7 +17,7 @@ const AboutPage = (props) => {
                 </p>
                 <p>My current main focus is on web developement in a variety of stacks.</p>
                 <p>Began my journey creating an App for my startup for home cooked meal deliveries, MaMadeIt.</p>
-                <p>Since then I have explored many of my passions such as creating my own game in the app store and exploring other technologies such as AR.</p>
+                <p>Since then I have explored many of my passions such as creating my own game and exploring other technologies such as AR.</p>
             </div>
         </div>
     )

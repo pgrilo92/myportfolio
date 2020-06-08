@@ -19,6 +19,9 @@
     background-size: cover;
     padding-top: 50px;
 }
+.intro span {
+    background-color: rgba(0, 0, 0, 0.8);
+}
 .main-title {
     margin: 0;
     padding-top: 40px;

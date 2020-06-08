@@ -22,3 +22,6 @@ iframe {
     padding: 0;
     margin: 0;
 }
+.phone-app {
+    max-width: 30vw;
+}

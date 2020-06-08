@@ -5,26 +5,26 @@ function HomePage() {
     return (
         <div className='Home-Page'>
             <div className="container intro">
-                <h1 className="main-title">Software Engineering</h1>
+                <h1 className="main-title"><span>Software Engineering</span></h1>
                 <br/>
-                <h5 className="main-header-5">Helping shape the future one line at a time.</h5>
+                <h5 className="main-header-5"><span>Helping shape the future one line at a time.</span></h5>
                 <div className="mainpage-jumb"></div> 
             </div>
             <div className="row">
                 <div className="col s4">
                     <i className="large material-icons">work</i>
                     <h3>Work</h3>
-                    <p>Agile Development, first we Validate your vision and tailor towards your needs.</p>
+                    <p>Agile Development, first we validate your vision and tailor towards your needs.</p>
                 </div>
                 <div className="col s4">
                     <i className="large material-icons">code</i>
                     <h3>Code</h3>
-                    <p>Scalable business-driven solutions using powerful and modern technologies.</p>
+                    <p>Scalable business-driven solutions using powerful, modern technologies.</p>
                 </div>
                 <div className="col s4">
                     <i className="large material-icons">cloud</i>
                     <h3>Remote</h3>
-                    <p>All work can be done remotely no matter where your location.</p>
+                    <p>All work can be done remotely no matter where your location, while keepinh quality high.</p>
                 </div>
             </div>
             <div className="container second">
@@ -42,12 +42,12 @@ function HomePage() {
                 <div className="col s4">
                     <i className="large devicon-python-plain colored"></i>
                     <h3>Python</h3>
-                    <p>A very powerful language, yet very easy to read. So far, I am mainly focused on the web dev side, but I am looking to expand towards the machine learning side of the language.</p>
+                    <p>A very powerful language, yet very easy to read. So far, I am mainly focused on the web dev side, but I am looking to expand towards machine learning and other subjects.</p>
                 </div>
                 <div className="col s4">
                     <i className="large devicon-csharp-plain colored"></i>
                     <h3>C#</h3>
-                    <p>This language can be used for multiple tasks. I currently used it mostly focused on Unity development for mobile apps.</p>
+                    <p>This language can be used for multiple tasks. I currently used it mostly for Unity development.</p>
                 </div>
             </div>
             <h3 className="lang-title">Frameworks</h3>
@@ -73,7 +73,7 @@ function HomePage() {
                 <div className="col s4">
                     <i className="large devicon-react-plain colored"></i>
                     <h3>React</h3>
-                    <p>React is a great framework that separates front-end and back-end as separates apps. It makes it easier to manage pages and control the state.</p>
+                    <p>React is a great framework that separates front-end and back-end as separates apps. Making it easier to manage pages and control state.</p>
                 </div>
                 <div className="col s4">
                     <i className="large devicon-jquery-plain colored"></i>
@@ -91,12 +91,12 @@ function HomePage() {
                 <div className="col s4">
                     <i className="large devicon-swift-plain colored"></i>
                     <h3>XCode</h3>
-                    <p>XCode is the main software used to create Apple apps, using a very dynamic language, Swift.</p>
+                    <p>XCode is the main software used for creating Apple apps, using a very dynamic language, Swift.</p>
                 </div>
                 <div className="col s4">
                     <i className="large devicon-illustrator-plain colored"></i>
                     <h3>Adobe/ Unity</h3>
-                    <p>Adobe used for creating images, icons, and logos. Unity is a very powerful software for gaming but can be used for exploring tools for VR/AR as well.</p>
+                    <p>Adobe is used for creating images, icons, and logos. Unity is a very powerful software for gaming but can be used for exploring tools for VR/AR as well.</p>
                 </div>
                 <div className="col s4">
                     <i className="large devicon-mongodb-plain colored"></i>
