@@ -1,0 +1,123 @@
+.contact-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: #191b19d9;
+  backdrop-filter: blur(10px);
+}
+.contact-dialog {
+  width: min(980px, 100%);
+  max-height: calc(100vh - 48px);
+  overflow: auto;
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--ink);
+  box-shadow: 18px 18px 0 var(--acid);
+}
+.contact-dialog-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #191b1940;
+  font: 9px 'IBM Plex Mono', monospace;
+}
+.contact-dialog-top button,
+.copy-email {
+  background: transparent;
+  color: inherit;
+}
+.contact-dialog-top button { padding: 8px; }
+.contact-dialog-grid {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 7%;
+  padding: 42px;
+}
+.contact-dialog-mark {
+  display: block;
+  margin-bottom: 24px;
+  color: var(--red);
+  font-size: 58px;
+  line-height: 1;
+}
+.contact-dialog-intro h2 { font-size: clamp(42px, 5vw, 72px); }
+.contact-dialog-intro p {
+  max-width: 390px;
+  margin: 24px 0;
+  color: #535b4c;
+  font-size: 12px;
+  line-height: 1.8;
+}
+.copy-email {
+  padding: 10px 0;
+  border-bottom: 1px solid;
+  font: 9px 'IBM Plex Mono', monospace;
+}
+.contact-form { display: grid; gap: 18px; }
+.contact-form label {
+  display: grid;
+  gap: 8px;
+  font: 9px 'IBM Plex Mono', monospace;
+  text-transform: uppercase;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #191b1960;
+  border-radius: 0;
+  padding: 11px 3px;
+  background: transparent;
+  color: var(--ink);
+  font: 14px 'Manrope', sans-serif;
+  resize: vertical;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 0;
+  border-color: var(--red);
+}
+.contact-submit {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4px;
+  padding: 16px 18px;
+  background: var(--ink);
+  color: var(--paper);
+  font: 10px 'IBM Plex Mono', monospace;
+  text-transform: uppercase;
+}
+.contact-submit:hover { background: var(--red); }
+.contact-status {
+  min-height: 18px;
+  color: #535b4c;
+  font: 9px/1.5 'IBM Plex Mono', monospace;
+}
+.contact-trigger {
+  border: 0;
+  background: transparent;
+  color: inherit;
+}
+.header-contact.contact-trigger { background: var(--ink); color: var(--paper); }
+.text-link.contact-trigger { cursor: pointer; }
+.contact-title.contact-trigger { width: 100%; text-align: left; }
+.contact-bottom .contact-trigger {
+  padding: 0;
+  font: inherit;
+}
+@media (max-width: 700px) {
+  .contact-modal { padding: 12px; }
+  .contact-dialog { max-height: calc(100vh - 24px); box-shadow: 8px 8px 0 var(--acid); }
+  .contact-dialog-grid { grid-template-columns: 1fr; gap: 28px; padding: 26px 20px; }
+  .contact-dialog-mark { display: none; }
+  .contact-dialog-intro h2 { font-size: 46px; }
+  .contact-dialog-intro p { margin: 16px 0; }
+  .contact-form { gap: 13px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .contact-modal { backdrop-filter: none; }
+}
