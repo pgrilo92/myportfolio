@@ -71,7 +71,7 @@ function PortfolioPage(props) {
                     <p>Game developed using Unity and deployed to the App store.</p>
                 </div>
                 <div className="col s12 m6">
-                    <iframe title="escape-the-pyramid" src="https://www.youtube.com/embed/0HbtJJNirhE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe title="risky-run" src="https://www.youtube.com/embed/0HbtJJNirhE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <p>Developed on GameSalad.</p>
                 </div>
             </div>
