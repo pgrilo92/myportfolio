@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import './App.css';
 import EngineeringStory from './EngineeringStory';
-import ContactDialog from './ContactDialog';
+import ContactDialog, { CONTACT_EMAIL } from './ContactDialog';
 import { getScrollMotion } from './scrollMotion';
 import alpha from '../../images/alpha-blog.png';
 import photo from '../../images/photo-app.png';
@@ -128,6 +128,25 @@ function App() {
     };
   }, [motion, filter]);
 
+  // The record idles slowly; hovering or tapping it speeds the same animation up without a jump.
+  const spinRecord = rate => e => {
+    const vinyl = e.currentTarget.querySelector('.vinyl');
+    if (!motion || !vinyl || !vinyl.getAnimations) return;
+    vinyl.getAnimations().forEach(animation => animation.updatePlaybackRate(rate));
+  };
+
+  // The closing call-to-action leans a little toward the cursor.
+  const magnet = e => {
+    if (!motion || e.pointerType === 'touch') return;
+    const rect = e.currentTarget.getBoundingClientRect();
+    e.currentTarget.style.setProperty('--mx', `${((e.clientX - rect.left) / rect.width - 0.5) * 24}px`);
+    e.currentTarget.style.setProperty('--my', `${((e.clientY - rect.top) / rect.height - 0.5) * 16}px`);
+  };
+  const releaseMagnet = e => {
+    e.currentTarget.style.removeProperty('--mx');
+    e.currentTarget.style.removeProperty('--my');
+  };
+
   const pointer = e => {
     if (!motion || e.pointerType === 'touch') return;
     const rect = e.currentTarget.getBoundingClientRect();
@@ -152,7 +171,7 @@ function App() {
         <div className="hero-top"><span className="eyebrow">JOAQUIM GRILO / DEVELOPER & AI SPECIALIST</span><span className="location"><i /> TORONTO, CA</span></div>
         <div className="hero-headline"><h1 id="hero-title"><span>BUILT WITH</span><span className="headline-second">INTENT<span className="headline-dot">.</span></span></h1><span className="hero-edition">PORTFOLIO<br />VOL. 01 / 2026</span></div>
         <div className="hero-lower"><div className="hero-description"><span className="eyebrow">WEB DEVELOPMENT & PRACTICAL AI</span><p>I build websites and applications, connect tools, and help people put AI to work. Based in Toronto, with a hands-on role at Sundaymoss.</p><a className="button button-light" href="#work">THE WORK <span aria-hidden="true">↘</span></a></div>
-          <div className="record-art" aria-hidden="true"><div className="vinyl"><div className="record-label"><span>JG / SIDE A</span><strong>MAKE<br />IT REAL.</strong><span>CODE • CULTURE • CURIOSITY</span></div></div><span className="record-sticker">HIGH<br />ENERGY<br />↗</span><div className="record-caption">OFF THE CLOCK / MUSIC IN THE MIX</div></div>
+          <div className="record-art" aria-hidden="true" onPointerEnter={spinRecord(4)} onPointerLeave={spinRecord(1)}><div className="vinyl"><div className="record-label"><span>JG / SIDE A</span><strong>MAKE<br />IT REAL.</strong><span>CODE • CULTURE • CURIOSITY</span></div></div><span className="record-sticker">HIGH<br />ENERGY<br />↗</span><div className="record-caption">OFF THE CLOCK / MUSIC IN THE MIX</div></div>
           <div className="hero-note"><span className="asterisk" aria-hidden="true">✳</span><p>WEB & APPS.<br />AI WORKFLOWS.<br />INDEPENDENT GAMES.</p><a href="#culture">OFF THE CLOCK ↘</a></div>
         </div>
         <div className="hero-bottom"><span>WEB DEVELOPMENT / AI / SUNDAYMOSS</span><a href="#now">KEEP SCROLLING <span aria-hidden="true">↓</span></a></div>
@@ -175,7 +194,7 @@ function App() {
       <section className="work section-pad" id="work">
         <div className="section-marker"><span>03 / SELECTED WORK</span><span>WEBSITES / APPLICATIONS / GAMES</span></div>
         <div className="work-heading"><h2>SELECTED<br /><em>PROJECTS.</em></h2><div className="filters" aria-label="Filter projects">{['All', 'Web', 'Games'].map(item => <button key={item} aria-pressed={filter === item} onClick={() => setFilter(item)}>{item}{item === 'All' && <span>06</span>}</button>)}</div></div>
-        <div className="project-grid" aria-live="polite">{projects.filter(p => filter === 'All' || p.type === filter).map((p, i) => <article className="project" key={p.name} style={{ '--card-index': i }}><a href={p.url} target="_blank" rel="noopener noreferrer" className={`project-visual ${p.symbol ? 'game-visual game-' + i : ''}`} aria-label={`${p.symbol ? 'Watch' : 'Visit'} ${p.name} (opens in new tab)`}>{p.image ? <img src={p.image} alt={p.alt || `${p.name} website preview`} loading="lazy" /> : <><span className="game-symbol" aria-hidden="true">{p.symbol}</span><span className="game-caption">{p.name}</span><span className="play-label">▶ WATCH THE GAME</span></>}<span className="project-arrow"><Arrow /></span></a><div className="project-info"><span className="project-number">0{i + 1} / {p.type.toUpperCase()}</span><div className="project-title"><h3>{p.name}</h3><span>{p.tech}</span></div><p>{p.detail}</p><a className="text-link" href={p.url} target="_blank" rel="noopener noreferrer">{p.symbol ? 'WATCH THE GAME' : 'VIEW PROJECT'} <Arrow /></a></div></article>)}</div>
+        <div className="project-grid" aria-live="polite">{projects.filter(p => filter === 'All' || p.type === filter).map((p, i) => <article className="project" key={p.name} style={{ '--card-index': i }} data-reveal><a href={p.url} target="_blank" rel="noopener noreferrer" className={`project-visual ${p.symbol ? 'game-visual game-' + i : ''}`} aria-label={`${p.symbol ? 'Watch' : 'Visit'} ${p.name} (opens in new tab)`}>{p.image ? <img src={p.image} alt={p.alt || `${p.name} website preview`} loading="lazy" /> : <><span className="game-symbol" aria-hidden="true">{p.symbol}</span><span className="game-caption">{p.name}</span><span className="play-label">▶ WATCH THE GAME</span></>}<span className="project-arrow"><Arrow /></span></a><div className="project-info"><span className="project-number">0{i + 1} / {p.type.toUpperCase()}</span><div className="project-title"><h3>{p.name}</h3><span>{p.tech}</span></div><p>{p.detail}</p><a className="text-link" href={p.url} target="_blank" rel="noopener noreferrer">{p.symbol ? 'WATCH THE GAME' : 'VIEW PROJECT'} <Arrow /></a></div></article>)}</div>
         <p className="archive-note">A selection from the archive. Some original websites may no longer be active.</p>
       </section>
       <section className="culture section-pad" id="culture" aria-labelledby="culture-title">
@@ -189,7 +208,7 @@ function App() {
         <a className="culture-link" href="https://www.instagram.com/joaquimpatrick/" target="_blank" rel="noopener noreferrer">MORE OF MY WORLD <span>@joaquimpatrick ↗</span></a>
       </section>
       <section className="about section-pad" id="about"><div className="section-marker"><span>05 / BEHIND THE WORK</span><span>JOAQUIM GRILO / TORONTO</span></div><div className="about-grid" data-reveal><div className="portrait-wrap"><img src={portrait} alt="Joaquim Grilo" loading="lazy" /><span>JOAQUIM GRILO / TORONTO</span></div><div className="about-copy"><h2>A LITTLE<br /><em>ABOUT ME.</em></h2><p className="intro">I’m Joaquim, a developer and AI specialist with an entrepreneurial background.</p><p>I started by building an app for MaMadeIt, my home-cooked meal delivery startup. Since then, I’ve worked across web applications, independent games, and experiments with augmented reality.</p><p>Today, I focus on web development, practical AI setups, and my work at Sundaymoss. I enjoy understanding how a business works as much as figuring out the technology behind it.</p><a className="text-link" href="https://github.com/pgrilo92" target="_blank" rel="noopener noreferrer">Explore my GitHub <Arrow /></a></div></div></section>
-      <section className="contact section-pad" id="contact"><span className="eyebrow">NEED A WEBSITE, AN AI WORKFLOW, OR A TECHNICAL PARTNER?</span><button type="button" onClick={openContact} className="contact-title contact-trigger">GOT AN IDEA?<br /><em>LET’S BUILD.</em><Arrow /></button><div className="contact-bottom"><button className="contact-trigger" type="button" onClick={openContact}>pgrilo92@hotmail.com <Arrow /></button><span>Web development · AI setups · Collaboration</span></div></section>
+      <section className="contact section-pad" id="contact"><span className="eyebrow">NEED A WEBSITE, AN AI WORKFLOW, OR A TECHNICAL PARTNER?</span><button type="button" onClick={openContact} onPointerMove={magnet} onPointerLeave={releaseMagnet} className="contact-title contact-trigger">GOT AN IDEA?<br /><em>LET’S BUILD.</em><Arrow /></button><div className="contact-bottom"><a className="contact-trigger" href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL} <Arrow /></a><span>Web development · AI setups · Collaboration</span></div></section>
     </main>
     <footer><span>© {new Date().getFullYear()} Joaquim Grilo</span><div><a href="https://www.instagram.com/joaquimpatrick/" target="_blank" rel="noopener noreferrer">Instagram <Arrow /></a><a href="https://linkedin.com/in/joaquim-grilo" target="_blank" rel="noopener noreferrer">LinkedIn <Arrow /></a><a href="https://github.com/pgrilo92" target="_blank" rel="noopener noreferrer">GitHub <Arrow /></a><button onClick={() => setMotion(!motion)} aria-pressed={motion}>Motion {motion ? 'on' : 'off'}</button><a href="#main">Back to top ↑</a></div></footer>
     <ContactDialog open={contactOpen} onClose={closeContact} />

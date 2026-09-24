@@ -1377,3 +1377,53 @@ footer>div {
   font: 8px 'IBM Plex Mono', monospace;
   letter-spacing: 1px;
 }
+
+/* Readability floor: functional labels never drop below 10px (11px on phones). */
+.hero-note a,.hero-bottom,.section-marker,.sunday-small,.sunday-bottom,.tags span,.filters button span,
+.project-number,.project-title>span,.play-label,.culture-card>.eyebrow,.culture-tag,.portrait-wrap>span {
+  font-size:10px
+}
+footer { font-size:11px }
+@media (max-width:700px) {
+  .eyebrow,.hero-top>.eyebrow,.location,.hero-description>.eyebrow,.contact>.eyebrow,
+  .hero-note,.hero-bottom,.section-marker,.project-number,.culture-card>.eyebrow,.culture-tag,.tags span {
+    font-size:10px
+  }
+  .button,.hero-note a,.filters button,.project-info .text-link,.culture-link,.contact-bottom,footer>div {
+    font-size:11px
+  }
+  .expertise-card li { font-size:12px }
+  .record-caption { font-size:8px }
+}
+
+/* Small, purposeful motion. Everything here is switched off by the Motion toggle and reduced-motion. */
+.motion-on .vinyl { animation:record-spin 14s linear infinite }
+.record-sticker { transition:transform .4s cubic-bezier(.3,1.6,.5,1) }
+.motion-on .record-art:hover .record-sticker { transform:rotate(8deg) scale(1.12) }
+
+.motion-on [data-reveal].revealed h2 { animation:rise .9s cubic-bezier(.2,.8,.2,1) both }
+.motion-on [data-reveal].revealed h2 em {
+  display:inline-block;
+  animation:rise .9s .14s cubic-bezier(.2,.8,.2,1) both
+}
+
+@media (hover:none) {
+  .motion-on .project.revealed .project-visual img { animation:settle 1.4s cubic-bezier(.2,.8,.2,1) both }
+}
+
+.contact-title { translate:var(--mx,0) var(--my,0); transition:translate .5s cubic-bezier(.2,.8,.2,1) }
+.contact-title>span { translate:var(--mx,0) var(--my,0); transition:transform .3s,translate .5s cubic-bezier(.2,.8,.2,1) }
+
+@keyframes record-spin { to { rotate:360deg } }
+@keyframes rise {
+  from { opacity:0; transform:translateY(.35em) }
+  to { opacity:1; transform:none }
+}
+@keyframes settle {
+  from { transform:scale(1.08) }
+  to { transform:none }
+}
+.motion-off .contact-title,.motion-off .contact-title>span { translate:none }
+@media (prefers-reduced-motion:reduce) {
+  .contact-title,.contact-title>span { translate:none }
+}
