@@ -122,8 +122,9 @@ body {
   border-color: var(--primary);
 }
 
-.language-switcher .flag {
-  font-size: 1rem;
+.flag-icon {
+  width: 20px;
+  height: 20px;
 }
 
 /* Hero Section */
@@ -138,11 +139,17 @@ body {
   color: white;
 }
 
-.ai-visual-effect {
+.hero-animation-canvas {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-animation-canvas {
+    opacity: 0.5;
+  }
 }
 
 .hero-content {
@@ -241,8 +248,10 @@ section {
 }
 
 .service-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  display: block;
 }
 
 .service-card h3 {
@@ -447,8 +456,10 @@ section {
 }
 
 .feature-icon {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 1.5rem;
+  display: block;
 }
 
 .bank-feature h3 {
@@ -467,9 +478,32 @@ section {
   background: var(--bg-alt);
 }
 
-.about-content {
-  max-width: 800px;
+.about-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  align-items: start;
+  max-width: 1000px;
   margin: 0 auto;
+}
+
+.about-photo-wrapper {
+  position: sticky;
+  top: 100px;
+}
+
+.about-photo {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 8px 24px var(--shadow);
+  aspect-ratio: 1;
+  position: relative;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .about-content p {
@@ -485,7 +519,6 @@ section {
   border-top: 2px solid var(--primary);
   font-weight: 600;
   color: var(--primary) !important;
-  text-align: center;
 }
 
 /* Contact Section */
@@ -508,8 +541,13 @@ section {
   margin-bottom: 1.5rem;
 }
 
-.contact-icon {
-  font-size: 2.5rem;
+.contact-icon-wrapper {
+  flex-shrink: 0;
+}
+
+.contact-icon-svg {
+  width: 64px;
+  height: 64px;
 }
 
 .contact-method strong {
@@ -617,5 +655,28 @@ section {
   
   .message-content {
     max-width: 85%;
+  }
+  
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .about-photo-wrapper {
+    position: relative;
+    top: 0;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .service-icon,
+  .feature-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .contact-icon-svg {
+    width: 48px;
+    height: 48px;
   }
 }

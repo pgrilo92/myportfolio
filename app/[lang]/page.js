@@ -1,7 +1,9 @@
 import { getTranslation } from '@/lib/translations';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import BankingAssistantDemo from '@/components/BankingAssistantDemo';
-import AIVisualEffect from '@/components/AIVisualEffect';
+import HeroAnimation from '@/components/HeroAnimation';
+import AboutSection from '@/components/AboutSection';
+import { SearchIcon, RobotIcon, GraduationIcon, HandshakeIcon, LockIcon, PeopleIcon, ClipboardIcon } from '@/components/Icons';
 
 export default function LangPage({ params }) {
   const { lang } = params;
@@ -27,7 +29,7 @@ export default function LangPage({ params }) {
 
       <main>
         <section className="hero-section">
-          <AIVisualEffect />
+          <HeroAnimation />
           <div className="hero-content">
             <h1 className="hero-title">{t.hero.title}</h1>
             <p className="hero-description">{t.hero.description}</p>
@@ -43,25 +45,25 @@ export default function LangPage({ params }) {
             
             <div className="services-grid">
               <div className="service-card">
-                <div className="service-icon">🔍</div>
+                <SearchIcon className="service-icon" />
                 <h3>{t.services.audit.title}</h3>
                 <p>{t.services.audit.description}</p>
               </div>
               
               <div className="service-card">
-                <div className="service-icon">🤖</div>
+                <RobotIcon className="service-icon" />
                 <h3>{t.services.assistant.title}</h3>
                 <p>{t.services.assistant.description}</p>
               </div>
               
               <div className="service-card">
-                <div className="service-icon">🎓</div>
+                <GraduationIcon className="service-icon" />
                 <h3>{t.services.training.title}</h3>
                 <p>{t.services.training.description}</p>
               </div>
               
               <div className="service-card">
-                <div className="service-icon">🤝</div>
+                <HandshakeIcon className="service-icon" />
                 <h3>{t.services.partner.title}</h3>
                 <p>{t.services.partner.description}</p>
               </div>
@@ -148,19 +150,19 @@ export default function LangPage({ params }) {
             
             <div className="banks-grid">
               <div className="bank-feature">
-                <div className="feature-icon">🔒</div>
+                <LockIcon className="feature-icon" />
                 <h3>{t.forBanks.privacy.title}</h3>
                 <p>{t.forBanks.privacy.description}</p>
               </div>
               
               <div className="bank-feature">
-                <div className="feature-icon">👥</div>
+                <PeopleIcon className="feature-icon" />
                 <h3>{t.forBanks.human.title}</h3>
                 <p>{t.forBanks.human.description}</p>
               </div>
               
               <div className="bank-feature">
-                <div className="feature-icon">📋</div>
+                <ClipboardIcon className="feature-icon" />
                 <h3>{t.forBanks.audit.title}</h3>
                 <p>{t.forBanks.audit.description}</p>
               </div>
@@ -168,17 +170,7 @@ export default function LangPage({ params }) {
           </div>
         </section>
 
-        <section id="about" className="about-section">
-          <div className="section-content">
-            <h2 className="section-title">{t.about.title}</h2>
-            <div className="about-content">
-              <p>{t.about.bio1}</p>
-              <p>{t.about.bio2}</p>
-              <p>{t.about.bio3}</p>
-              <p className="about-background">{t.about.background}</p>
-            </div>
-          </div>
-        </section>
+        <AboutSection t={t} />
 
         <section id="contact" className="contact-section">
           <div className="section-content">
@@ -187,7 +179,18 @@ export default function LangPage({ params }) {
             
             <div className="contact-info">
               <div className="contact-method">
-                <div className="contact-icon">📧</div>
+                <div className="contact-icon-wrapper">
+                  <svg className="contact-icon-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="8" y="16" width="48" height="32" rx="4" stroke="url(#emailGrad)" strokeWidth="2.5" fill="none"/>
+                    <path d="M8 20 L32 36 L56 20" stroke="url(#emailGrad)" strokeWidth="2.5" strokeLinejoin="round"/>
+                    <defs>
+                      <linearGradient id="emailGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stopColor="#3b82f6" />
+                        <stop offset="100%" stopColor="#8b5cf6" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
                 <div>
                   <strong>{t.contact.email}</strong>
                   <a href="mailto:patrickgrillo11@gmail.com" className="contact-email">
