@@ -1,68 +1,52 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Joaquim Grilo - AI Expert Portfolio
 
-## Available Scripts
+Modern portfolio website showcasing AI expertise for banks and businesses in Lusophone Africa.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Multilingual**: Portuguese (primary, Angolan variant), French, and English
+- **Modern Stack**: Next.js 14 with static site generation
+- **AI Features**: 
+  - Interactive banking assistant demo (client-side)
+  - Animated AI visual effects
+  - No API keys or backend required
+- **SEO Optimized**: Pre-rendered pages, OG tags, sitemap, hreflang tags
+- **Mobile-First**: Fully responsive design
+- **Performance**: Optimized images and assets
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Languages
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- **Portuguese (Angolan)**: Primary language with European Portuguese spelling and Angolan context
+- **French**: For Canadian connection
+- **English**: International audience
 
-### `npm test`
+## Development
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm install
+npm run dev
+```
 
-### `npm run build`
+Visit http://localhost:3000
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Build & Deploy
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+```bash
+npm run export
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The `out/` directory contains the static site ready for deployment.
 
-### `npm run eject`
+## Contact
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Email: patrickgrillo11@gmail.com
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Projects Featured
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. **Portuguese Banking Assistant**: AI assistant for Angolan banks with local context
+2. **AI Learning Hub**: Educational platform for AI adoption
+3. **Sunday Moss**: Content brand operated with AI agents
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+---
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+© 2026 Joaquim Grilo. All rights reserved.
