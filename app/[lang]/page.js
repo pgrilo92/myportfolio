@@ -3,14 +3,25 @@ import LanguageSwitcher from '@/components/LanguageSwitcher';
 import BankingAssistantDemo from '@/components/BankingAssistantDemo';
 import HeroAnimation from '@/components/HeroAnimation';
 import AboutSection from '@/components/AboutSection';
+import ScrollProgress from '@/components/ScrollProgress';
+import AnimatedCard from '@/components/AnimatedCard';
+import AnimatedSection from '@/components/AnimatedSection';
+import StatsCounter from '@/components/StatsCounter';
 import { SearchIcon, RobotIcon, GraduationIcon, HandshakeIcon, LockIcon, PeopleIcon, ClipboardIcon } from '@/components/Icons';
 
 export default function LangPage({ params }) {
   const { lang } = params;
   const t = getTranslation(lang);
   
+  const stats = [
+    { value: 10, suffix: '+', label: lang === 'pt' ? 'Anos de Experiência' : lang === 'fr' ? 'Années d\'Expérience' : 'Years Experience' },
+    { value: 50, suffix: '+', label: lang === 'pt' ? 'Projectos IA' : lang === 'fr' ? 'Projets IA' : 'AI Projects' },
+    { value: 3, suffix: '', label: lang === 'pt' ? 'Idiomas' : lang === 'fr' ? 'Langues' : 'Languages' },
+  ];
+
   return (
     <div className="page-container">
+      <ScrollProgress />
       <header className="site-header">
         <nav className="nav-container">
           <div className="nav-brand">
@@ -18,10 +29,10 @@ export default function LangPage({ params }) {
             <p className="brand-tagline">{t.hero.subtitle}</p>
           </div>
           <div className="nav-menu">
-            <a href={`#services`}>{t.nav.services}</a>
-            <a href={`#cases`}>{t.nav.cases}</a>
-            <a href={`#about`}>{t.nav.about}</a>
-            <a href={`#contact`}>{t.nav.contact}</a>
+            <a href={`#services`} className="nav-link">{t.nav.services}</a>
+            <a href={`#cases`} className="nav-link">{t.nav.cases}</a>
+            <a href={`#about`} className="nav-link">{t.nav.about}</a>
+            <a href={`#contact`} className="nav-link">{t.nav.contact}</a>
           </div>
           <LanguageSwitcher currentLang={lang} />
         </nav>
@@ -31,42 +42,57 @@ export default function LangPage({ params }) {
         <section className="hero-section">
           <HeroAnimation />
           <div className="hero-content">
+            <div className="hero-badge">{t.hero.subtitle}</div>
             <h1 className="hero-title">{t.hero.title}</h1>
             <p className="hero-description">{t.hero.description}</p>
             <p className="hero-location">{t.hero.location}</p>
-            <a href="#contact" className="hero-cta">{t.hero.cta}</a>
+            <a href="#contact" className="hero-cta">
+              <span>{t.hero.cta}</span>
+              <svg className="cta-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </a>
+            <div className="hero-stats">
+              <StatsCounter stats={stats} />
+            </div>
           </div>
         </section>
 
         <section id="services" className="services-section">
           <div className="section-content">
-            <h2 className="section-title">{t.services.title}</h2>
-            <p className="section-subtitle">{t.services.subtitle}</p>
+            <AnimatedSection animation="fade-up">
+              <h2 className="section-title">{t.services.title}</h2>
+              <p className="section-subtitle">{t.services.subtitle}</p>
+            </AnimatedSection>
             
             <div className="services-grid">
-              <div className="service-card">
+              <AnimatedCard delay={0} className="service-card">
+                <div className="card-glow"></div>
                 <SearchIcon className="service-icon" />
                 <h3>{t.services.audit.title}</h3>
                 <p>{t.services.audit.description}</p>
-              </div>
+              </AnimatedCard>
               
-              <div className="service-card">
+              <AnimatedCard delay={100} className="service-card">
+                <div className="card-glow"></div>
                 <RobotIcon className="service-icon" />
                 <h3>{t.services.assistant.title}</h3>
                 <p>{t.services.assistant.description}</p>
-              </div>
+              </AnimatedCard>
               
-              <div className="service-card">
+              <AnimatedCard delay={200} className="service-card">
+                <div className="card-glow"></div>
                 <GraduationIcon className="service-icon" />
                 <h3>{t.services.training.title}</h3>
                 <p>{t.services.training.description}</p>
-              </div>
+              </AnimatedCard>
               
-              <div className="service-card">
+              <AnimatedCard delay={300} className="service-card">
+                <div className="card-glow"></div>
                 <HandshakeIcon className="service-icon" />
                 <h3>{t.services.partner.title}</h3>
                 <p>{t.services.partner.description}</p>
-              </div>
+              </AnimatedCard>
             </div>
           </div>
         </section>
@@ -79,11 +105,13 @@ export default function LangPage({ params }) {
 
         <section id="cases" className="cases-section">
           <div className="section-content">
-            <h2 className="section-title">{t.cases.title}</h2>
-            <p className="section-subtitle">{t.cases.subtitle}</p>
+            <AnimatedSection animation="fade-up">
+              <h2 className="section-title">{t.cases.title}</h2>
+              <p className="section-subtitle">{t.cases.subtitle}</p>
+            </AnimatedSection>
             
             <div className="cases-grid">
-              <div className="case-card">
+              <AnimatedCard delay={0} className="case-card">
                 <h3>{t.cases.bank.title}</h3>
                 <div className="case-section">
                   <h4>{lang === 'pt' ? 'Problema' : lang === 'fr' ? 'Problème' : 'Problem'}</h4>
@@ -100,9 +128,9 @@ export default function LangPage({ params }) {
                 <div className="case-tech">
                   <strong>{lang === 'pt' ? 'Tecnologias:' : lang === 'fr' ? 'Technologies:' : 'Technologies:'}</strong> {t.cases.bank.tech}
                 </div>
-              </div>
+              </AnimatedCard>
 
-              <div className="case-card">
+              <AnimatedCard delay={150} className="case-card">
                 <h3>{t.cases.learning.title}</h3>
                 <div className="case-section">
                   <h4>{lang === 'pt' ? 'Problema' : lang === 'fr' ? 'Problème' : 'Problem'}</h4>
@@ -119,9 +147,9 @@ export default function LangPage({ params }) {
                 <div className="case-tech">
                   <strong>{lang === 'pt' ? 'Tecnologias:' : lang === 'fr' ? 'Technologies:' : 'Technologies:'}</strong> {t.cases.learning.tech}
                 </div>
-              </div>
+              </AnimatedCard>
 
-              <div className="case-card">
+              <AnimatedCard delay={300} className="case-card">
                 <h3>{t.cases.sundaymoss.title}</h3>
                 <div className="case-section">
                   <h4>{lang === 'pt' ? 'Problema' : lang === 'fr' ? 'Problème' : 'Problem'}</h4>
@@ -138,34 +166,36 @@ export default function LangPage({ params }) {
                 <div className="case-tech">
                   <strong>{lang === 'pt' ? 'Tecnologias:' : lang === 'fr' ? 'Technologies:' : 'Technologies:'}</strong> {t.cases.sundaymoss.tech}
                 </div>
-              </div>
+              </AnimatedCard>
             </div>
           </div>
         </section>
 
         <section className="for-banks-section">
           <div className="section-content">
-            <h2 className="section-title">{t.forBanks.title}</h2>
-            <p className="section-subtitle">{t.forBanks.subtitle}</p>
+            <AnimatedSection animation="fade-up">
+              <h2 className="section-title">{t.forBanks.title}</h2>
+              <p className="section-subtitle">{t.forBanks.subtitle}</p>
+            </AnimatedSection>
             
             <div className="banks-grid">
-              <div className="bank-feature">
+              <AnimatedCard delay={0} className="bank-feature">
                 <LockIcon className="feature-icon" />
                 <h3>{t.forBanks.privacy.title}</h3>
                 <p>{t.forBanks.privacy.description}</p>
-              </div>
+              </AnimatedCard>
               
-              <div className="bank-feature">
+              <AnimatedCard delay={150} className="bank-feature">
                 <PeopleIcon className="feature-icon" />
                 <h3>{t.forBanks.human.title}</h3>
                 <p>{t.forBanks.human.description}</p>
-              </div>
+              </AnimatedCard>
               
-              <div className="bank-feature">
+              <AnimatedCard delay={300} className="bank-feature">
                 <ClipboardIcon className="feature-icon" />
                 <h3>{t.forBanks.audit.title}</h3>
                 <p>{t.forBanks.audit.description}</p>
-              </div>
+              </AnimatedCard>
             </div>
           </div>
         </section>
