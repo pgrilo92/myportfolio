@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Joaquim Grilo</title>
+    <meta name="robots" content="noindex" />
+    <script>
+      // Forward the old multi-page URLs to their section on the new single page.
+      var map = { '/portfolio': '#work', '/about': '#about', '/contact': '#contact' };
+      var path = location.pathname.replace(/\/+$/, '').toLowerCase();
+      location.replace('/' + (map[path] || ''));
+    </script>
+  </head>
+  <body style="background:#0B1310"></body>
+</html>
